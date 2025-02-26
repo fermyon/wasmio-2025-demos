@@ -1,0 +1,18 @@
+spin_manifest_version = 2
+
+[application]
+name = "spin-deps-rust-demo"
+version = "0.1.0"
+authors = ["Thorsten Hans <thorsten.hans@fermyon.com>"]
+description = ""
+
+[[trigger.http]]
+route = "/..."
+component = "spin-deps-rust-demo"
+
+[component.spin-deps-rust-demo]
+source = "target/wasm32-wasip1/release/spin_deps_rust_demo.wasm"
+allowed_outbound_hosts = []
+[component.spin-deps-rust-demo.build]
+command = "cargo build --target wasm32-wasip1 --release"
+watch = ["src/**/*.rs", "Cargo.toml"]

@@ -1,0 +1,18 @@
+spin_manifest_version = 2
+
+[application]
+authors = ["Thorsten Hans <thorsten.hans@fermyon.com>"]
+description = ""
+name = "spin-deps-ts-demo"
+version = "0.1.0"
+
+[[trigger.http]]
+route = "/..."
+component = "spin-deps-ts-demo"
+
+[component.spin-deps-ts-demo]
+source = "dist/spin-deps-ts-demo.wasm"
+exclude_files = ["**/node_modules"]
+[component.spin-deps-ts-demo.build]
+command = ["npm install", "npm run build"]
+watch = ["src/**/*.ts"]
