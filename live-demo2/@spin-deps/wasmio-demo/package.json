@@ -1,0 +1,20 @@
+{
+    "name": "@spin-deps/wasmio-demo",
+    "version": "0.1.0",
+    "description": "Generated Package for @spin-deps/wasmio-demo",
+    "main": "index.js",
+    "scripts": {
+    },
+    "author": "",
+    "license": "ISC",
+    "config": {
+        "witDeps": 
+        [
+            {
+            "witPath": "./wit",
+            "package": "root:component",
+            "world": "importized-wasmio-demo"
+            }
+        ]
+    }
+}

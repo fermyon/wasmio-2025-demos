@@ -1,0 +1,9 @@
+package wasmio:demo@0.1.0;
+
+interface sorting {
+  sort: func(input: list<s32>) -> list<s32>;
+}
+
+world merge-sorter-importized {
+  import sorting;
+}
